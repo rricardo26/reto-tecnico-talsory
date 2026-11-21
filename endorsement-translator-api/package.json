@@ -1,0 +1,41 @@
+{
+  "name": "endorsement-translator-api",
+  "version": "1.0.0",
+  "description": "Microservicio Traductor de Endosos - Interseguro Reto Técnico 1",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "seed": "ts-node src/database/seeds/seed.ts",
+    "seed:prod": "node dist/database/seeds/seed.js",
+    "test": "jest --forceExit",
+    "test:coverage": "jest --coverage --forceExit"
+  },
+  "keywords": [
+    "hapi",
+    "typescript",
+    "typeorm",
+    "endorsement",
+    "insurance"
+  ],
+  "author": "Interseguro",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/hapi": "^21.3.12",
+    "@hapi/jwt": "^3.0.0",
+    "dotenv": "^16.4.7",
+    "joi": "^17.13.3",
+    "pg": "^8.13.3",
+    "reflect-metadata": "^0.2.2",
+    "typeorm": "^0.3.20"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.10.5",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.5",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "~5.7"
+  }
+}
